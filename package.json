@@ -1,0 +1,81 @@
+{
+  "name": "@gridworks-tech/swiftparser-oss",
+  "version": "1.0.0",
+  "description": "Open-source parser for SWIFT, ISO 20022, and banking message formats",
+  "main": "src/index.js",
+  "type": "module",
+  "scripts": {
+    "test": "jest --coverage",
+    "test:unit": "jest test/unit --coverage",
+    "test:integration": "jest test/integration --coverage",
+    "test:watch": "jest --watch --coverage",
+    "test:ci": "jest --coverage --ci --watchAll=false",
+    "lint": "eslint src/",
+    "build": "rollup -c",
+    "prepublishOnly": "npm run test:ci && npm run lint"
+  },
+  "keywords": [
+    "swift",
+    "mt103",
+    "mt202",
+    "iso20022",
+    "banking",
+    "parser",
+    "fintech",
+    "payments"
+  ],
+  "author": "Gridworks Tech Inc.",
+  "license": "Apache-2.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/gridworks-tech-inc/swiftparser-oss.git"
+  },
+  "bugs": {
+    "url": "https://github.com/gridworks-tech-inc/swiftparser-oss/issues"
+  },
+  "homepage": "https://gridworks.ai/swiftparser",
+  "dependencies": {
+    "uuid": "^9.0.0",
+    "winston": "^3.8.0",
+    "xml2js": "^0.5.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.20.0",
+    "@babel/preset-env": "^7.20.0",
+    "@jest/globals": "^29.3.0",
+    "babel-jest": "^30.0.4",
+    "eslint": "^8.30.0",
+    "jest": "^29.3.0",
+    "rollup": "^3.10.0"
+  },
+  "jest": {
+    "testEnvironment": "node",
+    "transform": {
+      "^.+\\.js$": "babel-jest"
+    },
+    "collectCoverageFrom": [
+      "src/**/*.js",
+      "!src/**/*.test.js"
+    ],
+    "coverageThreshold": {
+      "global": {
+        "branches": 100,
+        "functions": 100,
+        "lines": 100,
+        "statements": 100
+      }
+    },
+    "coverageReporters": [
+      "text",
+      "lcov",
+      "html"
+    ],
+    "testMatch": [
+      "**/test/**/*.test.js"
+    ],
+    "testTimeout": 10000
+  },
+  "engines": {
+    "node": ">=14.0.0"
+  }
+}

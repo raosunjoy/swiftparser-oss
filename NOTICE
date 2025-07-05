@@ -1,0 +1,24 @@
+SwiftParser-OSS
+Copyright 2024 Gridworks Tech Inc.
+
+This product includes software developed at Gridworks Tech Inc.
+(https://gridworks.ai).
+
+IMPORTANT NOTICE:
+This open-source version includes ONLY parsing and validation functionality.
+The following features are proprietary and require a commercial license:
+
+1. COBOL Transpiler - For parsing and converting COBOL copybooks
+2. Compliance Extraction - Advanced KYC, AML, and sanctions screening
+3. Blockchain Conversion - Direct conversion to blockchain transactions
+4. Smart Routing - Intelligent message routing based on content and rules
+
+These proprietary features are part of the LegacyBAAS platform and are
+protected by trade secrets and proprietary algorithms developed by
+Gridworks Tech Inc.
+
+For licensing inquiries: enterprise@gridworks.ai
+
+NO WARRANTY:
+This software is provided "as is" without warranty of any kind, either
+expressed or implied. See the Apache License 2.0 for details.
