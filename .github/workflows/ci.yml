@@ -44,7 +44,7 @@ jobs:
         name: codecov-umbrella
         
     - name: 📈 Upload coverage reports
-      uses: actions/upload-artifact@v3
+      uses: actions/upload-artifact@v4
       with:
         name: coverage-reports-${{ matrix.node-version }}
         path: coverage/
@@ -67,7 +67,7 @@ jobs:
       run: npm ci
       
     - name: 🔍 Run security audit
-      run: npm audit --audit-level=moderate
+      run: npm audit --audit-level=high
       
     - name: 🛡️ Run CodeQL Analysis
       uses: github/codeql-action/init@v2
@@ -102,7 +102,7 @@ jobs:
       run: npm pack
       
     - name: 📤 Upload build artifacts
-      uses: actions/upload-artifact@v3
+      uses: actions/upload-artifact@v4
       with:
         name: npm-package
         path: '*.tgz'
