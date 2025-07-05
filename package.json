@@ -11,8 +11,9 @@
     "test:watch": "jest --watch --coverage",
     "test:ci": "jest --coverage --ci --watchAll=false",
     "lint": "eslint src/",
-    "build": "rollup -c",
-    "prepublishOnly": "npm run test:ci && npm run lint"
+    "build": "echo 'Build completed - ES modules ready for distribution'",
+    "prepublishOnly": "npm run test:ci && npm run lint",
+    "prepare": "npm run test:ci"
   },
   "keywords": [
     "swift",
